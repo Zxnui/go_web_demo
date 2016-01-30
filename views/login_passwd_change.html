@@ -1,0 +1,39 @@
+{{template "header"}}
+	<title>修改密码</title>
+</head>
+<body>
+	<div class="container" style="width:500px;padding-top: 100px;">
+		<form method="POST" action="/login/changePasswd">
+			<div class="container" style="color:red;">
+				{{.error}}
+			</div>
+			<input type="hidden" name="emailCode" value="{{.emailCode}}" />
+		  <div class="form-group">
+		    <label>密码</label>
+		    <input id="pwd"  onfocus="this.type='password'" class="form-control" placeholder="输入密码" name="pwd" autocomplete="off">
+		  </div>
+		  <div class="form-group">
+		    <label>密码</label>
+		    <input id="pwdtwo"  onfocus="this.type='password'" class="form-control" placeholder="再次输入密码" name="pwdtwo" autocomplete="off">
+		  </div>
+		  <button type="submit" name="submit" value="0" class="btn btn-default" onclick="return checkInput();">提交</button>
+		</form>
+		<script type="text/javascript">
+			function checkInput(){	
+				var pwd = $("#pwd").val()
+				if (pwd=="") {
+					alert("请输入密码");
+					return false;
+				}
+				if(pwd.length<6){
+					alert("密码长度不能小于6位")
+					return false;
+				}
+				var pwdtwo = $("#pwdtwo").val()
+				if (pwd!=pwdtwo) {alert("两次输入密码不一致");return false;}
+				return true;
+			}
+		</script>
+	</div>
+</body>
+</html>

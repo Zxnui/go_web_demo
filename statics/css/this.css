@@ -1,0 +1,27 @@
+.web-icon{
+	width: 50px;
+	height: 50px;
+}
+
+body{
+	padding-top: 50px;
+}
+
+.navbar-fixed-top{
+	background: url(/img/background.png) no-repeat;
+	background-size: 100% 100%;
+	width: 100% !important;
+}
+
+.navbar-fixed-top a{
+	color: white !important;
+}
+
+.navbar-brand{
+	padding-top: 0px !important;
+}
+
+.navbar-fixed-top .active>a{
+	background-color: #000 !important;
+	color:white !important;
+}
