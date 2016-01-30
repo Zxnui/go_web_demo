@@ -1,9 +1,9 @@
 package main
 
 import (
-	"go-web-game/conf"
-	"go-web-game/controllers"
-	_ "go-web-game/models"
+	"go-web-demo/conf"
+	"go-web-demo/controllers"
+	_ "go-web-demo/models"
 	"net/http"
 	"runtime"
 )
